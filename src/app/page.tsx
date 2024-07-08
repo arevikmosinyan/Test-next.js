@@ -106,6 +106,24 @@ export default function Home() {
             </button>
           </form>
         </h1>
+        <div
+          style={{
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+          }}>
+          <Link
+            href='/formtodo'
+            style={{
+              color: 'white',
+              marginBottom: 20,
+              border: '2px solid #fff',
+              borderRadius: 10,
+              padding: 10,
+            }}>
+            Go to our FormToDo
+          </Link>
+        </div>
       </div>
     </div>
   );
