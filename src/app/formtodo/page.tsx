@@ -1,13 +1,13 @@
-'use client';
+"use client";
 
-import AddForm from '@/components/AddForm';
-import React from 'react';
+import AddForm from "@/components/AddForm";
+import React from "react";
 
 const initialState = { message: null };
 
 const FormToDo = () => {
   return (
-    <div className='w-[20vw] h-[20vh] bg-green-300 m-auto'>
+    <div className="w-[30vw] h-auto bg-blue-200 m-auto">
       <AddForm />
     </div>
   );
