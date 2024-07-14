@@ -124,6 +124,24 @@ export default function Home() {
             Go to our FormToDo
           </Link>
         </div>
+        <div
+          style={{
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+          }}>
+          <Link
+            href='/formauth'
+            style={{
+              color: 'white',
+              marginBottom: 20,
+              border: '2px solid #fff',
+              borderRadius: 10,
+              padding: 10,
+            }}>
+            Go to our FormAuth
+          </Link>
+        </div>
       </div>
     </div>
   );
