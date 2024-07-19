@@ -1,27 +1,27 @@
 "use client";
 
 import AddButtonForForm from "@/components/AddButtonForForm";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useFormState } from "react-dom";
 import { handleAction } from "./formserver";
 import { StateForAction } from "@/app/formtodo/types/form";
-import { todo } from "node:test";
 
-const initialState: StateForAction = { message: null, todo: "" };
-
-const toDoList = ["school", "kindergarder", "elementary", "middle"];
+const initialState = { message: "ssdad", todo: "" };
 
 const AddForm = () => {
-  const [state, formAction] = useFormState<StateForAction>(
-    handleAction,
-    initialState
-  );
+  const [state, formAction] = useFormState(handleAction, initialState);
+  const [toDoList, setToDoList] = useState([
+    "school",
+    "kindergarder",
+    "elementary",
+    "middle",
+  ]);
 
   useEffect(() => {
     if (state.message === "Success") {
-      toDoList.push(state.todo);
+      setToDoList((prev) => [...prev, state.todo]);
     }
-  }, [state.message, state.todo]);
+  }, [state]);
 
   console.log(state, "state");
   return (

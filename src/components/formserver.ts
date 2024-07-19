@@ -5,10 +5,7 @@ import { StateForAction } from "@/app/formtodo/types/form";
 
 const schemaForTodo = z.object({ todo: z.string() });
 
-export async function handleAction(
-  state: StateForAction,
-  formdata: FormData
-): Promise<StateForAction> {
+export async function handleAction(state: StateForAction, formdata: FormData) {
   console.log(formdata, "formdata");
 
   //   const data = formdata.get('todo');
