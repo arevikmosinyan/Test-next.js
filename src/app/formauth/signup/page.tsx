@@ -1,6 +1,7 @@
 import React from 'react';
 import { signupaction } from './actionforformauth';
 import { useActionState } from 'react';
+import Link from 'next/link';
 
 const SignUp = () => {
   const [state, action, pending] = useActionState(signupaction, undefined);
@@ -52,6 +53,12 @@ const SignUp = () => {
           {pending ? 'Submitting' : 'Sign up'}
         </button>
       </form>
+      <div className='mt-6 text-center text-sm'>
+        Already have an account?{' '}
+        <Link className='underline' href='/login'>
+          Login
+        </Link>
+      </div>
     </div>
   );
 };

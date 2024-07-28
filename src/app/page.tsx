@@ -142,6 +142,25 @@ export default function Home() {
             Go to our FormAuth
           </Link>
         </div>
+        <div
+          style={{
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+          }}>
+          <Link
+            // href='/formauthwithNextAuth' //yete NextAuth default page of Credetioals login, chi ashxatum
+            href='/formWithNextAuthCustomPage'
+            style={{
+              color: 'white',
+              marginBottom: 20,
+              border: '2px solid #fff',
+              borderRadius: 10,
+              padding: 10,
+            }}>
+            Go to our FormAuth with NextAuth
+          </Link>
+        </div>
       </div>
     </div>
   );
